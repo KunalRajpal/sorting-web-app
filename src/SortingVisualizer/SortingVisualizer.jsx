@@ -15,10 +15,12 @@ const SECONDARY_COLOR = 'red';
 
 
 
-export default class SortingVisualizer extends React.component {
+export default class SortingVisualizer extends React.Component {
     //array stored in our state 
     //this is going to be our main array
     constructor(props){
+
+        super(props);
         this.state = {
             array: [],
         };
@@ -43,9 +45,10 @@ export default class SortingVisualizer extends React.component {
         return (
             <>
                 {array.map((value, idx) => (
-                    <div className = "array-bar" key = {idx}>
-                        {value}
-                    </div>
+                    <div 
+                    className = "array-bar" 
+                    key = {idx}>
+                    style = {{height: '${value}px'}}</div>
                 ))}
             </>
         )
