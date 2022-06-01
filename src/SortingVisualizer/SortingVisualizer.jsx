@@ -38,6 +38,18 @@ export default class SortingVisualizer extends React.component {
         this.setState({array});
     }
 
+    render () {
+
+        return (
+            <>
+                {array.map((value, idx) => (
+                    <div className = "array-bar" key = {idx}>
+                        {value}
+                    </div>
+                ))}
+            </>
+        )
+    }
 }
 
 // From https://stackoverflow.com/questions/4959975/generate-random-number-between-two-numbers-in-javascript
